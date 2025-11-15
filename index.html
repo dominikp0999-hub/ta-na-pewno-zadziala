@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Fotografia Ślubna – Portfolio</title>
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<header class="topbar">
+    <div class="logo">TWOJE IMIĘ</div>
+</header>
+
+<section class="hero">
+    <div class="overlay"></div>
+    <div class="hero-text fade">
+        <h1>Fotografia Ślubna</h1>
+        <p>Minimalizm • Emocje • Elegancja</p>
+    </div>
+</section>
+
+<section class="portfolio fade-section">
+    <h2>Portfolio</h2>
+    <p class="subtext">Dodaj swoje zdjęcia i uzupełnij galerię.</p>
+
+    <div class="grid">
+        <div class="ph"></div>
+        <div class="ph"></div>
+        <div class="ph"></div>
+        <div class="ph"></div>
+        <div class="ph"></div>
+        <div class="ph"></div>
+    </div>
+</section>
+
+<section class="about fade-section">
+    <h2>O mnie</h2>
+    <p>
+        Jestem fotografem ślubnym specjalizującym się w uchwyceniu naturalnych emocji 
+        i niepowtarzalnych momentów. Tworzę minimalistyczne, jasne i eleganckie kadry, 
+        skupiając się na subtelnych detalach oraz prawdziwych relacjach między ludźmi.
+        <br><br>
+        W swojej pracy kieruję się subtelnością i naturalnością. Pozwalam wydarzeniom 
+        przebiegać w swoim rytmie, zachowując jednocześnie wyczucie światła, kadru 
+        i momentu. W efekcie otrzymujecie ponadczasową historię z Waszego dnia.
+    </p>
+</section>
+
+<section class="contact fade-section">
+    <h2>Kontakt</h2>
+    <p class="subtext">Opowiedz mi o swoim dniu — odpowiem w ciągu 24h.</p>
+
+    <form action="#" method="POST">
+        <input type="text" placeholder="Imię i nazwisko" required>
+        <input type="email" placeholder="Adres e-mail" required>
+        <textarea placeholder="Wiadomość..." required></textarea>
+        <button>Wyślij</button>
+    </form>
+</section>
+
+<footer>
+    © 2025 Fotografia Ślubna — Wszystkie prawa zastrzeżone
+</footer>
+
+<script>
+const fadeElements = document.querySelectorAll('.fade-section');
+
+function fadeOnScroll() {
+    fadeElements.forEach(el => {
+        const rect = el.getBoundingClientRect().top;
+        if (rect < window.innerHeight - 100) {
+            el.classList.add('visible');
+        }
+    });
+}
+
+window.addEventListener('scroll', fadeOnScroll);
+fadeOnScroll();
+</script>
+
+</body>
+</html>
